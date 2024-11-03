@@ -7,5 +7,5 @@ if __name__ == '__main__':
     np_height_in = np.array(height_in)
     np_weight_lb = np.array(weight_lb)
 
-    print(f'Weight at position 51: {np_weight_lb[51]}')
-    print(f'Sub-array: {np_height_in[101:112]}')
+    print(f'Weight at position 51: {np_weight_lb[50]}')
+    print(f'Sub-array: {np_height_in[100:112]}')
