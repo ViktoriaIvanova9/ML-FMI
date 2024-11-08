@@ -10,6 +10,8 @@ def random_numbers():
     for _ in range(100):
         if np.random.rand() <= 0.005:
             current_output = 0
+            result_list.append(current_output)
+            continue
 
         thrown_num = np.random.randint(1, 7)
         
@@ -36,8 +38,8 @@ def repeat_randoms():
     return all_walks
 
 def visualize_walks():
-    list_range = np.arange(0, 101)
     np_all_walks = repeat_randoms()
+    list_range = np.arange(0, 101)
     
     for elem in np_all_walks:
         plt.plot(list_range, elem)

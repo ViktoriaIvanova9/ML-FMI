@@ -10,6 +10,8 @@ def random_numbers_ends():
     for _ in range(100):
         if np.random.rand() <= 0.005:
             current_output = 0
+            result_list.append(current_output)
+            continue
 
         thrown_num = np.random.randint(1, 7)
         
