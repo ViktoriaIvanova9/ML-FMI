@@ -9,7 +9,7 @@ def main():
     print(sales_df.iloc[0:2])
 
     f, (scatter1, scatter2, scatter3) = plt.subplots(1, 3, sharey=True, figsize=(10, 6))
-    f.suptitle("Correlation between variables and target")
+    f.suptitle("Relationship between variables and target")
     scatter1.scatter(sales_df[['tv']], sales_df[['sales']])
     scatter1.set_xlabel('tv')
     scatter1.set_ylabel('sales')

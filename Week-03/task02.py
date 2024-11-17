@@ -8,7 +8,7 @@ def main():
     sales_df = pd.read_csv('../DATA/advertising_and_sales_clean.csv')
 
     X = sales_df.drop(['sales', 'influencer'], axis=1)
-    y = sales_df[['sales']].values
+    y = sales_df['sales'].values
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
@@ -20,7 +20,7 @@ def main():
     print(f'Actual Values: {y_test[0:2]}')
 
     r2 = lin_regression.score(X_test, y_test)
-    rsme = np.sqrt((np.sum((y_test - predictions)** 2))/len(predictions))
+    rsme = np.sqrt((np.sum((y_test - predictions) ** 2))/len(predictions))
 
     print(f'R^2: {r2}')
     print(f'RMSE: {rsme}')
