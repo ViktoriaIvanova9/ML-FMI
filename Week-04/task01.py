@@ -20,7 +20,7 @@ def main():
     print(f'Standard Deviation: {np.std(r2)}')
     print(f'95% Confidence Interval: {np.quantile(r2, [0.025, 0.975])}')
 
-    plt.plot(np.arange(1, 7), result)
+    plt.plot(np.arange(1, 7), r2)
     plt.title("R^2 per 6-fold split")
     plt.xlabel("# Split")
     plt.ylabel("R^2")

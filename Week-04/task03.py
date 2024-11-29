@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.linear_model import Lasso
-from sklearn.model_selection import train_test_split
 
 def main():
     sales_df = pd.read_csv('../DATA/advertising_and_sales_clean.csv')
