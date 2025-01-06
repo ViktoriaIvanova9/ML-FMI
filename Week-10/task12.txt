@@ -1,0 +1,44 @@
+Which class of AI techniques began to work around 2005 for solving real-world problems? - Машинно самообучение
+
+What is a classic application of AI is discussed in the video? - Лицево разпознаване
+
+What is the simplest way of getting Machine Learning to solve a task? - Информирано обучение(Supervised learning)
+
+Define what supervised learning is. - Показваме на компютъра какво искаме да получим. Имаме примерни данни които казват на компютъра че 
+                                    при определен вход трябва да ни върне определен изход
+
+What does AI require in order to work at all? - данни с които да бъде трениран
+
+What class of tasks does the task for facial recognition belong to? - класификационна задача
+
+What is the task solved by each neuron in the brain? - разпознаване на шаблон
+
+What happens when a neuron recognizes a pattern? - изпраща своите сигнали до другите неврони, с които е свързан
+
+What is a digital picture made up of? - състои се от милиони цветни точки
+
+What are the three reasons that allowed the modelling of human brain cells in software? -
+                                                    1. научен прогрес - дълбоко обучение
+                                                    2. наличност на големи данни 
+                                                    3. по-евтина компютърна мощ
+
+Which type of computer processor is suited really well for performing the mathematics related to deep learning? - GPU(Графичен процесор)
+
+Do the capabilities of neural networks grow with scale? - да
+
+What allowed for the biggest and fastest advances in the field? - компаниите от Силициевата долина
+
+What is the name of the probably most important paper in the last decade? - "Attention is all you need"
+
+What is the Transformer architecture designed for? - "large language models"(толеми езикови модели)
+
+What is the innovation that the Transformer architecture has? - "attention mechanism"(механизъм на вниманието)
+
+What is the key point about GPT-3? - Това е огромна стъпка в развитието спрямо сегашните технологии
+
+Is machine learning more efficient at learning than humans? Why? - Не. Защото човек не се нуждае от толкова много информация, за да 
+                                                                    научи нещо.
+
+What is "the bitter truth"? - Изкуственият интелект може да прогресира само ако има повече данни и компютърна мощ
+
+What is one reason why ChatGPT is not conscious? - той няма никаква идея кое е вярно и кое не е
