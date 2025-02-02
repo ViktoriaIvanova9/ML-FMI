@@ -12,7 +12,7 @@ def main():
 
     tokenizer = RegexpTokenizer(r'[A-Za-z]+')
     for line in lines:
-        tokenized_line = tokenizer.tokenize(line) # I don't know by which pattern to remove the prompt and not the SCENE for example
+        tokenized_line = tokenizer.tokenize(line) # I don't know by which pattern to remove the prompt(ARTHUR:, SOLDIER #1) and not the "SCENE".
 
     # Here was written to chart the number of words per line but the plot is about distribution of word lengths, I am not sure which of 
     # those two is the idea because if it is for the distribution of the word lengths, then why is the division by lines?

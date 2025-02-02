@@ -1,29 +1,29 @@
 import numpy as np
-import collections
+from collections import Counter
 import matplotlib.pyplot as plt
 from nltk.corpus import stopwords
-from gensim.corpora.dictionary import Dictionary
-from gensim.models import TfidfModel
+import spacy
 import nltk
 from nltk import pos_tag, ne_chunk_sents
 
 def main():
-    with open('../DATA/news_articles.txt') as article_file:
+    with open('../DATA/news_articles.txt', encoding="utf8") as article_file:
         article = article_file.read()
 
+    nlp_pipeline = spacy.load('en_core_web_sm')
+    nlp_pipeline.get_pipe('ner')
 
-    tokenized_sent = nltk.word_tokenize(article)
-    print(tokenized_sent)
-    # tagged_sent = nltk.pos_tag(tokenized_sent)
-    # chucks_list = nltk.ne_chunk(tagged_sent)
-    # print(chucks_list)
+    doc = nlp_pipeline(article)
+    entities = [doc.ents[i].label_  for i, _ in enumerate(doc.ents)]
 
-    # for elem in 
-    # fig, ax = plt.subplots()
-    # ax.pie(counts, labels=labels)
-    # plt.title("Distribution of NER categories")
-    # plt.tight_layout()
-    # plt.show()
+    counts = Counter(entities)
+    labels = list(counts.keys())
+    number_of_elements = list(counts.values())
+
+    plt.pie(number_of_elements, labels=labels)
+    plt.title("Distribution of NER categories")
+    plt.tight_layout()
+    plt.show()
 
 if __name__ == '__main__':
     main()

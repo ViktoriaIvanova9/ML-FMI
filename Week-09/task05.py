@@ -15,7 +15,7 @@ def main():
     # By looking at the most common tokens, what topic does this article cover? - it is not clear
 
     stop_words = set(stopwords.words('english'))
-    tokenizer = RegexpTokenizer(r'\w+') # here it reads n from \n as a separate word 
+    tokenizer = RegexpTokenizer(r'\w+')
     tokenized_text = tokenizer.tokenize(wiki_text)
     
     filtered_text = []

@@ -1,0 +1,20 @@
+ipykernel
+# Pinned due to a problem with Linux: https://github.com/explosion/spaCy/discussions/12941
+spacy==3.7.5 # After install, also run "python -m spacy download en_core_web_sm"
+pandas
+scikit-learn
+matplotlib
+seaborn
+PyQt6
+yapf
+isort
+mlxtend
+nltk
+gensim
+torch==2.3.1
+torchvision==0.18.1
+torchaudio==2.3.1
+networkx
+torchmetrics
+tqdm
+pillow

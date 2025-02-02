@@ -75,5 +75,5 @@ def main():
 if __name__ == '__main__':
     main()
 
-    # What do you notice about the confidence the model has in them? - it is quessing them pretty good,
+    # What do you notice about the confidence the model has in them? - it is guessing them pretty good,
     # when I expect 1 it is above 0.7 and when I expect 0 it is below 0.2. Only for (0, 0) it is 0.5

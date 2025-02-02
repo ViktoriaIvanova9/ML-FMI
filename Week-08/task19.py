@@ -8,12 +8,13 @@ from scipy.sparse import csr_matrix
 
 def main():    
     wikipedia_df = pd.read_csv('../DATA/wikipedia-vectors.csv', index_col=0)
-    titles = wikipedia_df.columns
 
+    titles = wikipedia_df.columns
     data = csr_matrix(wikipedia_df.T)
 
-    nmf = NMF(n_components=6).fit_transform(data)
-    print(np.round(nmf, 2)[:6])
+    nmf = NMF(n_components=6)
+    weights = nmf.fit_transform(data)
+    print(np.round(weights, 2)[:6])
 
     new_df = pd.DataFrame(nmf, index=titles, columns=np.arange(0, 6))
     selected_rows = new_df.loc[["Anne Hathaway", "Denzel Washington"]]
@@ -21,9 +22,7 @@ def main():
 
     vocabulary_df = pd.read_csv('../DATA/wikipedia-vocabulary-utf8.txt', header=None)
     print(f'The topic, that the articles about Anne Hathaway and Denzel Washington have in common, has the words:')
-    
-    
-
+    print(pd.DataFrame(nmf.components_, columns=vocabulary_df).loc[3].nlargest())
 
 
 if __name__ == '__main__':

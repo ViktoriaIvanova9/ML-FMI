@@ -1,11 +1,11 @@
 import numpy as np
 
 class Value:
-    def __init__(self, fnum : float):
-        self.fnum = fnum
+    def __init__(self, data : float):
+        self.data = data
 
     def __repr__(self):
-        return (f'Value(data={self.fnum})')
+        return (f'Value(data={self.data})')
 
 def main() -> None:
     value1 = Value(5)

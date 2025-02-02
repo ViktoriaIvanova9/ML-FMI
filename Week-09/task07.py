@@ -16,8 +16,7 @@ def main():
     tokenized_first_sent = nltk.word_tokenize(tokenized_article[0])
     tagged_first_sent = nltk.pos_tag(tokenized_first_sent)
     # print(f'First sentence with NER applied: {nltk.ne_chunk_sents(tagged_first_sent, binary=True)}') 
-    # don't know what different is expected here
-    print(f'First sentence with NER applied: {nltk.ne_chunk(tagged_first_sent)}')
+    print(f'First sentence with NER applied: {nltk.ne_chunk(tagged_first_sent)}') # why this is not okay?
 
     # it is unclear for me what approach I should use for the last one
     list_NE = []

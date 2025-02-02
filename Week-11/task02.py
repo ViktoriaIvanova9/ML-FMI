@@ -1,14 +1,14 @@
 import numpy as np
 
 class Value:
-    def __init__(self, fnum : float):
-        self.fnum = fnum
+    def __init__(self, data : float):
+        self.data = data
 
     def __repr__(self):
-        return (f'Value(data={self.fnum})')
+        return (f'Value(data={self.data})')
     
     def __add__(self, other):
-        return Value(self.fnum + other.fnum)
+        return Value(self.data + other.data)
 
 def main() -> None:
     x = Value(2.0)
